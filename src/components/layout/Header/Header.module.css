@@ -1,0 +1,115 @@
+.header {
+  height: var(--header-height, 96px);
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  display: grid;
+  grid-template-columns: 96px 1fr 120px;
+  align-items: center;
+  padding: 12px 20px;
+  gap: 12px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo {
+  width: 76px;
+  height: 66px;
+  object-fit: contain;
+  display: block;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+  color: var(--color-text-inverse);
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--color-text-inverse);
+  font-size: 0.72rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.languageButton {
+  border: none;
+  background: transparent;
+  color: var(--color-text-inverse);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menuButton {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.menuLine {
+  display: block;
+  width: 28px;
+  height: 3px;
+  border-radius: 999px;
+  background-color: var(--color-text-inverse);
+}
+
+@media (max-width: 480px) {
+  .header {
+    grid-template-columns: 76px 1fr 92px;
+    padding: 10px 14px;
+  }
+
+  .logo {
+    width: 64px;
+    height: 64px;
+  }
+
+  .title {
+    font-size: 0.98rem;
+  }
+
+  .subtitle {
+    font-size: 0.68rem;
+  }
+
+  .languageButton {
+    font-size: 0.82rem;
+  }
+
+  .menuLine {
+    width: 24px;
+  }
+}
