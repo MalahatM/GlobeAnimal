@@ -1,0 +1,163 @@
+.footer {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  padding: 18px 24px 12px;
+}
+
+.topRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo {
+  width: 140px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.socialLink {
+  width: 46px;
+  height: 46px;
+  border: 2px solid #b9d9f2;
+  border-radius: 50%;
+  color: #b9d9f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.socialLink:hover {
+  background-color: #b9d9f2;
+  color: var(--color-primary);
+}
+
+.linksRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.footerLink {
+  color: #b9d9f2;
+  text-decoration: none;
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.footerLink:hover {
+  text-decoration: underline;
+}
+
+.dot {
+  color: #b9d9f2;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.divider {
+  width: 100%;
+  max-width: 760px;
+  height: 4px;
+  margin: 0 auto 12px;
+  background-color: #5f8cb3;
+  border-radius: 999px;
+}
+
+.copy {
+  margin: 0;
+  text-align: center;
+  color: #b9d9f2;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 16px 18px 12px;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .socialLink {
+    width: 42px;
+    height: 42px;
+    font-size: 1.15rem;
+  }
+
+  .footerLink {
+    font-size: 1rem;
+  }
+
+  .copy {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .topRow {
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logo {
+    width: 110px;
+  }
+
+  .socials {
+    gap: 10px;
+  }
+
+  .socialLink {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+
+  .linksRow {
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .footerLink {
+    font-size: 0.95rem;
+  }
+
+  .dot {
+    font-size: 1.1rem;
+  }
+
+  .divider {
+    height: 3px;
+    margin-bottom: 10px;
+  }
+
+  .copy {
+    font-size: 0.95rem;
+  }
+}
