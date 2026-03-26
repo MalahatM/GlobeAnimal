@@ -1,0 +1,26 @@
+.page {
+  padding: 28px 0 40px;
+}
+
+.container {
+  width: min(100% - 32px, 560px);
+  margin: 0 auto;
+}
+
+.title {
+  margin: 0 0 24px;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.searchSection {
+  margin-bottom: 28px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
