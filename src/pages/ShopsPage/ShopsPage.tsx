@@ -1,6 +1,6 @@
 import styles from "./ShopsPage.module.css";
 import SearchBar from "../../components/shops/SearchBar/SearchBar";
-import ShopCard from "../../components/shops/ShopCard/ShopCard";
+import ShopCard from "../../components/ShopCard/ShopCard";
 import { mockShops } from "../../data/mockShops";
 
 function ShopsPage() {
