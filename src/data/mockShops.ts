@@ -22,5 +22,13 @@ export const mockShops = [
     phone: "020127636",
     address: "Bergfotsgatan 1, Stockholm",
     imageUrl: "https://www.faltoversten.se/app/uploads/2022/12/Faltoversten_liggande-Zoo-1-1-1440x810.webp"
+  },
+   {
+    id: 3,
+    company_name: "vooplus",
+    email: "info@vooplus.se",
+    phone: "020127636",
+    address: "Bergfotsgatan 1, Stockholm",
+    imageUrl: "https://www.faltoversten.se/app/uploads/2022/12/Faltoversten_liggande-Zoo-1-1-1440x810.webp"
   }
 ];
