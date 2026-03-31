@@ -1,6 +1,6 @@
 .searchWrapper {
-  width: 100%;
-  height: 58px;
+   width: min(100%, 600px);
+  height: 48px;
   border: 1.5px solid #1f1f1f;
   border-radius: 18px;
   background-color: var(--color-surface);
@@ -8,6 +8,7 @@
   align-items: center;
   gap: 12px;
   padding: 0 18px;
+  margin: 0 auto;
 }
 
 .icon {
@@ -22,4 +23,8 @@
   background: transparent;
   font: inherit;
   font-size: 1.1rem;
+}
+.searchSection {
+  width: clamp(320px, 50%, 700px);
+  margin: 0 auto 28px;
 }
