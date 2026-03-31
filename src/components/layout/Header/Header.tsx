@@ -1,7 +1,16 @@
+import { useState } from "react";
 import styles from "./Header.module.css";
 import logo from "../../../assets/images/logo.png";
 
+const languages = ["English", "Swedish","Spanish"];
+
 function Header() {
+  const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
+
+  const toggleLanguageMenu = () => {
+    setIsLanguageMenuOpen((prevState) => !prevState);
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.left}>
@@ -14,9 +23,31 @@ function Header() {
       </div>
 
       <div className={styles.right}>
-        <button type="button" className={styles.languageButton}>
-          Language
-        </button>
+        <div className={styles.languageMenu}>
+          <button
+            type="button"
+            className={styles.languageButton}
+            onClick={toggleLanguageMenu}
+            aria-haspopup="true"
+            aria-expanded={isLanguageMenuOpen}
+          >
+            Language
+          </button>
+
+          {isLanguageMenuOpen && (
+            <div className={styles.languageDropdown}>
+              {languages.map((language) => (
+                <button
+                  key={language}
+                  type="button"
+                  className={styles.languageOption}
+                >
+                  {language}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
 
         <button
           type="button"

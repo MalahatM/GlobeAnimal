@@ -25,10 +25,10 @@ export const mockShops = [
   },
    {
     id: 3,
-    company_name: "vooplus",
-    email: "info@vooplus.se",
+    company_name: "Anicura shop",
+    email: "info@Anicura.se",
     phone: "020127636",
-    address: "Bergfotsgatan 1, Stockholm",
-    imageUrl: "https://www.faltoversten.se/app/uploads/2022/12/Faltoversten_liggande-Zoo-1-1-1440x810.webp"
+    address: "Djurgardsgatan 1, Stockholm",
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQMxRZnDFUuycGmknlLa2ZjfUxLtBFkWfQKA&s"
   }
 ];
