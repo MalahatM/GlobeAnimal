@@ -24,7 +24,7 @@ export const mockShops = [
     imageUrl: "https://www.faltoversten.se/app/uploads/2022/12/Faltoversten_liggande-Zoo-1-1-1440x810.webp"
   },
    {
-    id: 3,
+    id: 4,
     company_name: "Anicura shop",
     email: "info@Anicura.se",
     phone: "020127636",
