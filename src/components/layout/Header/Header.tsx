@@ -1,14 +1,30 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
 import logo from "../../../assets/images/logo.png";
 
-const languages = ["English", "Swedish","Spanish"];
+const languages = ["English", "Swedish", "Spanish"];
+
+const navItems = [
+  { label: "Shops", path: "/shops" },
+  { label: "Service", path: "/service" },
+  { label: "Insurance", path: "/insurance" },
+];
 
 function Header() {
   const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
   const toggleLanguageMenu = () => {
     setIsLanguageMenuOpen((prevState) => !prevState);
+  };
+
+  const toggleNavMenu = () => {
+    setIsNavOpen((prevState) => !prevState);
+  };
+
+  const closeNavMenu = () => {
+    setIsNavOpen(false);
   };
 
   return (
@@ -49,15 +65,33 @@ function Header() {
           )}
         </div>
 
-        <button
-          type="button"
-          className={styles.menuButton}
-          aria-label="Open menu"
-        >
-          <span className={styles.menuLine}></span>
-          <span className={styles.menuLine}></span>
-          <span className={styles.menuLine}></span>
-        </button>
+        <div className={styles.navWrapper}>
+          <button
+            type="button"
+            className={styles.menuButton}
+            aria-label="Open menu"
+            onClick={toggleNavMenu}
+          >
+            <span className={styles.menuLine}></span>
+            <span className={styles.menuLine}></span>
+            <span className={styles.menuLine}></span>
+          </button>
+
+          {isNavOpen && (
+            <div className={styles.navMenu}>
+              {navItems.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className={styles.navItem}
+                  onClick={closeNavMenu}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </header>
   );
