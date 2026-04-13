@@ -15,6 +15,18 @@ function Header() {
   const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
 
+  const toggleLanguageMenu = () => {
+    setIsLanguageMenuOpen((prevState) => !prevState);
+  };
+
+  const toggleNavMenu = () => {
+    setIsNavOpen((prevState) => !prevState);
+  };
+
+  const closeNavMenu = () => {
+    setIsNavOpen(false);
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.left}>
@@ -27,12 +39,13 @@ function Header() {
       </div>
 
       <div className={styles.right}>
-        {/* language */}
         <div className={styles.languageMenu}>
           <button
             type="button"
             className={styles.languageButton}
-            onClick={() => setIsLanguageMenuOpen((p) => !p)}
+            onClick={toggleLanguageMenu}
+            aria-haspopup="true"
+            aria-expanded={isLanguageMenuOpen}
           >
             Language
           </button>
@@ -40,7 +53,11 @@ function Header() {
           {isLanguageMenuOpen && (
             <div className={styles.languageDropdown}>
               {languages.map((language) => (
-                <button key={language} className={styles.languageOption}>
+                <button
+                  key={language}
+                  type="button"
+                  className={styles.languageOption}
+                >
                   {language}
                 </button>
               ))}
@@ -48,12 +65,12 @@ function Header() {
           )}
         </div>
 
-        {/* hamburger */}
         <div className={styles.navWrapper}>
           <button
             type="button"
             className={styles.menuButton}
-            onClick={() => setIsNavOpen((p) => !p)}
+            aria-label="Open menu"
+            onClick={toggleNavMenu}
           >
             <span className={styles.menuLine}></span>
             <span className={styles.menuLine}></span>
@@ -67,7 +84,7 @@ function Header() {
                   key={item.path}
                   to={item.path}
                   className={styles.navItem}
-                  onClick={() => setIsNavOpen(false)}
+                  onClick={closeNavMenu}
                 >
                   {item.label}
                 </Link>
