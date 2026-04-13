@@ -1,0 +1,164 @@
+    .card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 18px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.companyName {
+  margin: 0 0 14px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.imageWrapper {
+  width: 160px;
+  height: 160px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.contactPerson {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.infoItem {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.button {
+  align-self: flex-start;
+  margin-top: 6px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2f63b3;
+  color: white;
+  padding: 10px 18px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  max-width: 100%;
+}
+
+/* tablet */
+@media (max-width: 767px) {
+  .companyName {
+    font-size: 1.35rem;
+  }
+
+  .content {
+    gap: 14px;
+  }
+
+  .imageWrapper {
+    width: 128px;
+    height: 90px;
+  }
+}
+
+/* small mobile */
+@media (max-width: 480px) {
+  .card {
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .companyName {
+    margin-bottom: 14px;
+    font-size: 1.9rem;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    height: 180px;
+  }
+
+  .info {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .contactPerson {
+    font-size: 0.98rem;
+  }
+
+  .infoItem {
+    font-size: 0.95rem;
+  }
+
+  .button {
+    align-self: stretch;
+    width: 100%;
+    text-align: center;
+    padding: 12px 16px;
+  }
+}
+
+/* extra small mobile - around 320px */
+@media (max-width: 360px) {
+  .card {
+    padding: 14px;
+  }
+
+  .companyName {
+    font-size: 1.65rem;
+  }
+
+  .imageWrapper {
+    height: 150px;
+  }
+
+  .contactPerson {
+    font-size: 0.92rem;
+  }
+
+  .infoItem {
+    font-size: 0.9rem;
+  }
+
+  .button {
+    font-size: 0.95rem;
+    padding: 12px 14px;
+  }
+}

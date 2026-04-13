@@ -3,7 +3,7 @@
   background-color: var(--color-primary);
   color: var(--color-text-inverse);
   display: grid;
-  grid-template-columns: 96px 1fr 120px;
+  grid-template-columns: 96px 1fr 140px;
   align-items: center;
   padding: 12px 20px;
   gap: 12px;
@@ -54,6 +54,10 @@
   gap: 12px;
 }
 
+.languageMenu {
+  position: relative;
+}
+
 .languageButton {
   border: none;
   background: transparent;
@@ -63,6 +67,35 @@
   font-weight: 400;
   cursor: pointer;
   padding: 0;
+}
+
+.languageDropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 130px;
+  background-color: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  padding: 6px 0;
+  z-index: 20;
+}
+
+.languageOption {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #1f1f1f;
+  font: inherit;
+  font-size: 0.9rem;
+  text-align: left;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.languageOption:hover {
+  background-color: #f3f4f6;
 }
 
 .menuButton {
@@ -85,10 +118,36 @@
   border-radius: 999px;
   background-color: var(--color-text-inverse);
 }
+.navWrapper {
+  position: relative;
+}
 
+.navMenu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 8px 0;
+  min-width: 140px;
+  z-index: 30;
+}
+
+.navItem {
+  display: block;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: #1f1f1f;
+  font-size: 0.9rem;
+}
+
+.navItem:hover {
+  background-color: #f3f4f6;
+}
 @media (max-width: 480px) {
   .header {
-    grid-template-columns: 76px 1fr 92px;
+    grid-template-columns: 76px 1fr 110px;
     padding: 10px 14px;
   }
 
@@ -107,6 +166,15 @@
 
   .languageButton {
     font-size: 0.82rem;
+  }
+
+  .languageDropdown {
+    min-width: 118px;
+  }
+
+  .languageOption {
+    font-size: 0.82rem;
+    padding: 9px 12px;
   }
 
   .menuLine {
