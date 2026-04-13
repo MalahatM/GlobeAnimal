@@ -1,14 +1,18 @@
 import Header from "./components/layout/Header/Header";
 import Footer from "./components/layout/Footer/Footer";
 
+import { Routes, Route, Navigate } from "react-router-dom";
+
 function App() {
   return (
     <div className="app">
       <Header />
 
       <main className="main">
-        
-        <div style={{ height: "400px" }} />
+        <Routes>
+          <Route path="/" element={<Navigate to="/shops" />} />
+          
+        </Routes>
       </main>
 
       <Footer />

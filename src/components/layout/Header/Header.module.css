@@ -85,7 +85,33 @@
   border-radius: 999px;
   background-color: var(--color-text-inverse);
 }
+.navWrapper {
+  position: relative;
+}
 
+.navMenu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 8px 0;
+  min-width: 140px;
+  z-index: 30;
+}
+
+.navItem {
+  display: block;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: #1f1f1f;
+  font-size: 0.9rem;
+}
+
+.navItem:hover {
+  background-color: #f3f4f6;
+}
 @media (max-width: 480px) {
   .header {
     grid-template-columns: 76px 1fr 92px;
