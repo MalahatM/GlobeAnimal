@@ -1,0 +1,168 @@
+.container {
+  padding: 20px;
+  text-align: center;
+}
+
+/* title */
+
+.title {
+  margin: 0 0 24px;
+  text-align: center;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  font-style: italic;
+}
+/* filters */
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 100px; 
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.filters select {
+  padding: 10px 25px;
+  border-radius: 25px;
+  border: 1px solid #999;
+  background: rgb(253, 252, 252);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.searchSection {
+  width: clamp(320px, 50%, 700px);
+  margin: 0 auto 28px;
+  margin-bottom: 20px;
+}
+
+/* cards layout */
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 25px;
+  justify-items: center;
+    margin-top: 20px;
+}
+
+/* card */
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid #ccc;
+  border-radius: 14px;
+  padding: 18px;
+  background: #f9f9f9;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* top row */
+
+.topRow {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* image */
+
+.imageBox {
+  width: 100px;
+  height: 85px;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+
+.imageBox img {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+/* info */
+
+.info {
+  text-align: left;
+}
+
+.info h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.desc {
+  font-size: 13px;
+  margin: 6px 0;
+}
+
+.price {
+  font-size: 12px;
+  color: #666;
+}
+
+/* button */
+
+.button {
+  width: 100%;
+  padding: 11px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2f5ea7;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.button:hover {
+  background-color: #244a86;
+}
+
+.loadMore {
+  margin-top: 30px;
+  padding: 14px 40px;
+  border-radius: 14px;
+  border: none;
+  background-color: #2d5ec9;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* hover */
+.loadMore:hover {
+  background-color: #244fa8;
+}
+
+/* click */
+.loadMore:active {
+  transform: scale(0.96);
+}
+
+/* 🟢 responsive */
+
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
