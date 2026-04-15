@@ -1,14 +1,27 @@
 import Header from "./components/layout/Header/Header";
 import Footer from "./components/layout/Footer/Footer";
+
 import ShopsPage from "./pages/ShopsPage/ShopsPage";
+import ServicePage from "./pages/ServicePage/ServicePage";
+
+import { Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
   return (
     <div className="app">
       <Header />
+
       <main className="main">
-        <ShopsPage />
+        <Routes>
+          {/* default route */}
+          <Route path="/" element={<Navigate to="/shops" />} />
+
+          {/* pages */}
+          <Route path="/shops" element={<ShopsPage />} />
+          <Route path="/service" element={<ServicePage />} />
+        </Routes>
       </main>
+
       <Footer />
     </div>
   );
