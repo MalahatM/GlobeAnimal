@@ -12,7 +12,7 @@ export const mockServices = [
     city: "Gothenburg",
     country: "Sweden",
     phone: "+467894227563",
-    website: "#",
+    website: "https://www.furry-paws.com/shop/grooming",
     image: furryPawsImage,
   },
   {
@@ -23,7 +23,7 @@ export const mockServices = [
     city: "Gothenburg",
     country: "Sweden",
     phone: "+46324524524",
-    website: "#",
+    website: "https://www.happy-tails.co/",
     image: happyTailsImage,
   },
   {
@@ -34,7 +34,7 @@ export const mockServices = [
     city: "Gothenburg",
     country: "Sweden",
     phone: "+4609090909",
-    website: "#",
+    website: "https://www.rover.com/uk/?utm_medium=cpc&utm_source=google&utm_campaign=10684766544&utm_content=112212256984_729570031586_CjwKCAjw7vzOBhBxEiwAc7WNr2uMqsEkbDa8KGIaF5Mx4HRrsWJX7Eh69HgXZZPbaiH-qdP8UkiLLRoCTtkQAvD_BwE&utm_term=dog%20care%20preston_e&adwordslocation=1012228&gad_source=1&gad_campaignid=10684766544&gbraid=0AAAAADPp_a72fdcf20yP0-oWOfnG9oTcD&gclid=CjwKCAjw7vzOBhBxEiwAc7WNr2uMqsEkbDa8KGIaF5Mx4HRrsWJX7Eh69HgXZZPbaiH-qdP8UkiLLRoCTtkQAvD_BwE",
     image: goteborgPetDaycareImage,
   },
   {
@@ -45,7 +45,7 @@ export const mockServices = [
     city: "Gothenburg",
     country: "Sweden",
     phone: "+46722446312",
-    website: "#",
+    website: "https://www.wecarepets.com/",
     image: weCarePetsImage,
   },
 ];
