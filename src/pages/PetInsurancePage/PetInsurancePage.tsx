@@ -51,6 +51,8 @@ const shops = [
 ];
 
 function PetInsurancePage() {
+
+
   const [searchTerm, setSearchTerm] = useState("");
   const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE_COUNT);
 
