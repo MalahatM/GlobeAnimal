@@ -8,7 +8,7 @@ const languages = ["English", "Swedish", "Spanish"];
 const navItems = [
   { label: "Shops", path: "/shops" },
   { label: "Service", path: "/service" },
-  { label: "Insurance", path: "/insurance" },
+    { label: "Insurance", path: "/pet-insurance" },
 ];
 
 function Header() {
