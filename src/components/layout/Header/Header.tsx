@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
-import logo from "../../../assets/images/logo.png";
+import logo from "../../../assets/images/logonew.png";
 
 const languages = ["English", "Swedish", "Spanish"];
 
 const navItems = [
   { label: "Shops", path: "/shops" },
   { label: "Service", path: "/service" },
-  { label: "Insurance", path: "/insurance" },
+    { label: "Insurance", path: "/pet-insurance" },
 ];
 
 function Header() {

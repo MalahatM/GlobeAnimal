@@ -1,5 +1,5 @@
 import styles from "./Footer.module.css";
-import footerLogo from "../../../assets/images/HEVC.png";
+import footerLogo from "../../../assets/images/HEVCnew.png";
 
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";

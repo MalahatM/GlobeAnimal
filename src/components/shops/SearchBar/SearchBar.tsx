@@ -3,6 +3,7 @@ import styles from "./SearchBar.module.css";
 type SearchBarProps = {
   value: string;
   onChange: (value: string) => void;
+   placeholder?: string;
 };
 
 function SearchBar({ value, onChange }: SearchBarProps) {
