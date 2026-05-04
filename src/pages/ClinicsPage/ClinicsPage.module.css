@@ -1,0 +1,131 @@
+/* صفحه اصلی */
+.container {
+  padding: 28px 0 40px;
+  width: min(100% - 32px, 1200px);
+  margin: 0 auto;
+}
+
+/* عنوان */
+.title {
+  margin: 0 0 24px;
+  text-align: center;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* فیلترها */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filters select {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 1px solid #999;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* سرچ */
+.search {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* کارت‌ها */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 👈 دقیقا 2 تا در هر ردیف */
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  padding: 20px;
+  background: #f5f5f5;
+  transition: 0.2s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* 👈 مهم */
+}
+
+
+
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* متن‌ها */
+.card h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.card p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+.open {
+  color: green;
+  font-weight: 600;
+}
+/* دکمه داخل کارت (آبی 🔵) */
+.btn {
+  margin-top: 15px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  background-color: #2f5ea7; /* 👈 آبی */
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  align-self: flex-end; 
+}
+
+.btn:hover {
+  background-color: #244a86;
+}
+
+.loadMoreWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.loadMoreButton {
+  padding: 14px 40px;
+  border-radius: 14px;
+  border: none;
+  background-color: #2f5ea7; /* آبی */
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.loadMoreButton:hover {
+  background-color: #244a86;
+}
+
+.loadMoreButton:active {
+  transform: scale(0.96);
+}
+
+/* 📱 ریسپانسیو */
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr; /* موبایل: 1 ستونه */
+  }
+}
