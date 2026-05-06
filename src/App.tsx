@@ -5,6 +5,7 @@ import PetInsurancePage from "./pages/PetInsurancePage/PetInsurancePage";
 import ServicePage from "./pages/ServicePage/ServicePage";
 import { Routes, Route, Navigate } from "react-router-dom";
 import ClinicsPage from "./pages/ClinicsPage/ClinicsPage";
+import HomePage from "./pages/HomePage/HomePage";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
 
       <main className="main">
         <Routes>
-          <Route path="/" element={<Navigate to="/shops" />} />
+			<Route path="/" element={<HomePage />} />
           <Route path="/shops" element={<ShopsPage />} />
           <Route path="/service" element={<ServicePage />} />
           <Route path="/pet-insurance" element={<PetInsurancePage />} />
