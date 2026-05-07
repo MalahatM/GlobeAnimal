@@ -6,9 +6,11 @@ import logo from "../../../assets/images/logonew.png";
 const languages = ["English", "Swedish", "Spanish"];
 
 const navItems = [
+	{ label: "Home", path: "/" },
   { label: "Shops", path: "/shops" },
   { label: "Service", path: "/service" },
     { label: "Insurance", path: "/pet-insurance" },
+	{ label: "Clinics", path: "/clinics" },
 ];
 
 function Header() {
