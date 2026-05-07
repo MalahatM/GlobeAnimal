@@ -16,7 +16,7 @@ export const mockSupplierOffers = [
       text: "Get 10% Discount",
     },
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae lorem sed massa feugiat pretium.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae lorem sed massa feugiat pretium.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae lorem sed massa feugiat pretium.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae lorem sed massa feugiat pretium.",
     website: "https://www.arkenzoo.se",
   },
   {
@@ -31,7 +31,7 @@ export const mockSupplierOffers = [
       text: "Get 20% Discount",
     },
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae lorem sed massa feugiat pretium.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae lorem sed massa feugiat pretium.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae lorem sed massa feugiat pretium.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae lorem sed massa feugiat pretium.",
     website: "https://example.com",
   },
   {
@@ -46,7 +46,7 @@ export const mockSupplierOffers = [
       text: "Get 50% Discount",
     },
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae lorem sed massa feugiat pretium.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae lorem sed massa feugiat pretium.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae lorem sed massa feugiat pretium.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae lorem sed massa feugiat pretium.",
     website: "https://www.folksam.se",
   },
    {
@@ -61,7 +61,7 @@ export const mockSupplierOffers = [
       text: "Get 60% Discount",
     },
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae lorem sed massa feugiat pretium.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae lorem sed massa feugiat pretium.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae lorem sed massa feugiat pretium.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae lorem sed massa feugiat pretium.",
     website: "https://www.happy-tails.co/",
   },
 ];

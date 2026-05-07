@@ -1,76 +1,55 @@
-import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styles from "./SupplierOfferDetailsPage.module.css";
-
-type AdDetails = {
-  id: number;
-  title: string;
-  description: string;
-  supplier: {
-    name: string;
-    homepage: string;
-    logo_url: string;
-  };
-  price: {
-    text: string;
-  };
-  validity: {
-    from: string;
-    to: string;
-  };
-};
+import { mockSupplierOffers } from "../../data/mockSupplierOffers";
 
 function SupplierOfferDetailsPage() {
   const { id } = useParams();
-  const [ad, setAd] = useState<AdDetails | null>(null);
 
-  useEffect(() => {
-    if (!id) return;
+  const offer = mockSupplierOffers.find((item) => item.id === Number(id));
 
-    fetch(`/?page=api_shop_ad&id=${id}`)
-      .then((res) => res.json())
-      .then((data) => setAd(data.ad))
-      .catch((err) => console.error(err));
-  }, [id]);
-
-  if (!ad) return <div className={styles.loading}>Loading...</div>;
+  if (!offer) {
+    return <div className={styles.loading}>Offer not found</div>;
+  }
 
   return (
-    <div className={styles.container}>
+    <section className={styles.page}>
+      <div className={styles.hero}>
+        <img src={offer.image} alt={offer.supplierName} className={styles.heroImage} />
+      </div>
+
       <div className={styles.card}>
-        <img
-          src={ad.supplier.logo_url}
-          alt={ad.supplier.name}
-          className={styles.logo}
-        />
+        <div className={styles.topRow}>
+          <div>
+            <h1 className={styles.name}>{offer.supplierName}</h1>
+            <p className={styles.address}>{offer.address}</p>
+          </div>
 
-        <h1 className={styles.title}>{ad.title}</h1>
+          <div className={styles.distance}>{offer.distance}</div>
+        </div>
 
-        <p className={styles.price}>{ad.price.text}</p>
+        <div className={styles.discountRow}>
+          <span className={styles.discountIcon}>🏷️</span>
+          <p className={styles.discount}>{offer.price.text}</p>
+        </div>
 
-        <p className={styles.validity}>
-          Valid: {ad.validity.from} → {ad.validity.to}
-        </p>
+        <div className={styles.divider}></div>
 
-        <h3 className={styles.subtitle}>About</h3>
+        <h2 className={styles.subtitle}>About {offer.supplierName}</h2>
 
         <p className={styles.description}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          {offer.description}
         </p>
 
         <a
-          href={ad.supplier.homepage}
+          href={offer.website}
           target="_blank"
           rel="noreferrer"
           className={styles.button}
         >
-          Visit site
+          Visit the site for more info
         </a>
       </div>
-    </div>
+    </section>
   );
 }
 
