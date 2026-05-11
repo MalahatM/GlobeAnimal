@@ -5,6 +5,7 @@ import PetInsurancePage from "./pages/PetInsurancePage/PetInsurancePage";
 import ServicePage from "./pages/ServicePage/ServicePage";
 import SupplierOffersPage from "./pages/SupplierOffersPage/SupplierOffersPage";
 import SupplierOfferDetailsPage from "./pages/SupplierOfferDetailsPage/SupplierOfferDetailsPage";
+import AccommodationPage from "./pages/AccommodationPage/AccommodationPage";
 import ClinicsPage from "./pages/ClinicsPage/ClinicsPage";
 import HomePage from "./pages/HomePage/HomePage";
 import { Routes, Route, Navigate } from "react-router-dom";
@@ -27,6 +28,7 @@ function App() {
           />
           <Route path="/clinics" element={<ClinicsPage />} />
           <Route path="*" element={<Navigate to="/" />} />
+		  <Route path="/accommodation" element={<AccommodationPage />} />
         </Routes>
       </main>
 
