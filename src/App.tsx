@@ -8,6 +8,7 @@ import SupplierOfferDetailsPage from "./pages/SupplierOfferDetailsPage/SupplierO
 import AccommodationPage from "./pages/AccommodationPage/AccommodationPage";
 import ClinicsPage from "./pages/ClinicsPage/ClinicsPage";
 import HomePage from "./pages/HomePage/HomePage";
+import ContactPage from "./pages/ContactPage/ContactPage";
 import { Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path="/clinics" element={<ClinicsPage />} />
           <Route path="*" element={<Navigate to="/" />} />
 		  <Route path="/accommodation" element={<AccommodationPage />} />
+		  <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </main>
 
