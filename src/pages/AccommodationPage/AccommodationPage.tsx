@@ -1,5 +1,6 @@
 import { mockAccommodations } from "../../data/mockAccommodations";
 import styles from "./AccommodationPage.module.css";
+import { Link } from "react-router-dom";
 
 function AccommodationPage() {
   return (
@@ -89,8 +90,9 @@ function AccommodationPage() {
         <p>
           Contact us for personalized recommendations.
         </p>
-
-        <button>Contact us</button>
+<Link to="/contact" className={styles.contactButton}>
+  Contact us
+</Link>
       </div>
     </section>
   );
