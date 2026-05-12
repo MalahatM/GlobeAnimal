@@ -1,4 +1,3 @@
-
 .container {
   min-height: 100vh;
   display: flex;
@@ -15,33 +14,27 @@
   border-radius: 20px;
 }
 
-
 .hero img {
   width: 100%;
   height: 100%;
-  object-fit: cover;   
+  object-fit: cover;
   display: block;
-  
 }
 
 .text {
   position: absolute;
   top: 15%;
   left: 5%;
-
   z-index: 2;
-
   color: #1b3c6b;
   max-width: 40%;
 }
 
-
 .text h1 {
   margin: 0;
-  font-size: 36px; 
+  font-size: 36px;
   font-weight: 700;
 }
-
 
 .text p {
   margin-top: 10px;
@@ -54,14 +47,13 @@
   gap: 14px;
 }
 
-
 .card {
-  background: #e9e6e6;
+  background: #dbd8d8;
   padding: 16px;
   border-radius: 14px;
   text-decoration: none;
   color: #06234d;
-  transition: 0.2s;
+  transition: all 0.2s ease;
 }
 
 .card h3 {
@@ -69,16 +61,10 @@
   font-size: 20px;
 }
 
-.card {
-  background: #dbd8d8;
-  transition: all 0.2s ease;
-}
-
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
-
-  background: #bbc5d3; 
+  background: #f0f4fa;
 }
 
 .support {
@@ -89,28 +75,13 @@
 }
 
 .support p {
-  margin: 0 0 10px;
+  margin: 0 0 18px;
   font-size: 14px;
 }
 
-
-.support button {
-  padding: 10px 20px;
-  border-radius: 10px;
-  border: none;
-  background-color: #6c7aa1;
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.support button:hover {
-  background-color: #58678f;
-}
-
-
 .contactBtn {
+  display: inline-block;
+  text-decoration: none;
   padding: 10px 20px;
   border-radius: 10px;
   border: none;
@@ -118,82 +89,28 @@
   color: white;
   font-weight: 600;
   cursor: pointer;
+  transition: 0.2s;
 }
 
-
-.modalOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  z-index: 1000;
+.contactBtn:hover {
+  background-color: #244b86;
 }
-
-
-.modal {
-  background: white;
-  padding: 25px;
-  border-radius: 16px;
-  width: 90%;
-  max-width: 400px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.modal input,
-.modal textarea {
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-
-.actions {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-
-.cancelBtn {
-  background: #ccc;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.sendBtn {
-  background: #2f5ea7;
-  color: white;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.error {
-  color: red;
-  font-size: 12px;
-  margin: 4px 0 8px;
-}
-
 
 @media (max-width: 768px) {
   .hero {
     height: 50vh;
   }
 
+  .text {
+    max-width: 60%;
+  }
+
   .text h1 {
     font-size: 18px;
+  }
+
+  .text p {
+    font-size: 14px;
   }
 
   .grid {
