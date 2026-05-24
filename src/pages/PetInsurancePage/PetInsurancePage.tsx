@@ -2,6 +2,13 @@ import { useMemo, useState } from "react";
 import styles from "./PetInsurancePage.module.css";
 import SearchBar from "../../components/shops/SearchBar/SearchBar";
 
+import settledImage from "../../assets/images/setteled.png";
+import lassieImage from "../../assets/images/lassie-logo.jpg";
+import svelandImage from "../../assets/images/sveland.webp";
+import agriaImage from "../../assets/images/agria_ref1.png";
+import petInsurImage from "../../assets/images/petinsur.png";
+import linsurImage from "../../assets/images/linsur.png";
+
 const INITIAL_VISIBLE_COUNT = 4;
 const LOAD_MORE_STEP = 2;
 
@@ -11,52 +18,49 @@ const shops = [
     name: "Settled",
     description: "Smart pet insurance with preventive care",
     price: "From 99 kr/month",
-    image: "/src/assets/images/setteled.png",
+    image: settledImage,
   },
   {
     id: 2,
     name: "Lassie",
     description: "Traditional Swedish pet insurance",
     price: "From 109 kr/month",
-    image: "/src/assets/images/lassie-logo.jpg",
+    image: lassieImage,
   },
   {
     id: 3,
     name: "Sveland",
     description: "Modern pet insurance made simple",
     price: "From 129 kr/month",
-    image: "/src/assets/images/sveland.webp",
+    image: svelandImage,
   },
   {
     id: 4,
     name: "Agria",
     description: "Modern pet insurance made simple",
     price: "From 149 kr/month",
-    image: "/src/assets/images/agria_ref1.png",
+    image: agriaImage,
   },
   {
     id: 5,
     name: "Pet insurance",
     description: "Reliable pet insurance",
     price: "From 99 kr/month",
-    image: "/src/assets/images/petinsur.png",
+    image: petInsurImage,
   },
   {
     id: 6,
     name: "Pets Best",
     description: "Flexible pet coverage",
     price: "From 129 kr/month",
-    image: "/src/assets/images/linsur.png",
+    image: linsurImage,
   },
 ];
 
 function PetInsurancePage() {
-
-
   const [searchTerm, setSearchTerm] = useState("");
   const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE_COUNT);
 
-  // 🔍 فیلتر سرچ
   const filteredShops = useMemo(() => {
     const normalized = searchTerm.trim().toLowerCase();
 
@@ -67,9 +71,7 @@ function PetInsurancePage() {
     );
   }, [searchTerm]);
 
-  // 👇 فقط آیتم‌های قابل نمایش
   const visibleShops = filteredShops.slice(0, visibleCount);
-
   const hasMore = visibleCount < filteredShops.length;
 
   const handleLoadMore = () => {
@@ -85,7 +87,6 @@ function PetInsurancePage() {
     <main className={styles.container}>
       <h1 className={styles.title}>Pet insurance</h1>
 
-      {/* filters */}
       <div className={styles.filters}>
         <select>
           <option value="">Country</option>
@@ -101,13 +102,12 @@ function PetInsurancePage() {
         </select>
       </div>
 
-     <SearchBar
-  value={searchTerm}
-  onChange={handleSearchChange}
-  placeholder="Search by insurance name"
-/>
+      <SearchBar
+        value={searchTerm}
+        onChange={handleSearchChange}
+        placeholder="Search by insurance name"
+      />
 
-      {/* cards */}
       <div className={styles.cards}>
         {visibleShops.length > 0 ? (
           visibleShops.map((shop) => (
@@ -128,13 +128,10 @@ function PetInsurancePage() {
             </div>
           ))
         ) : (
-          <p className={styles.noResults}>
-            No matching insurance found.
-          </p>
+          <p className={styles.noResults}>No matching insurance found.</p>
         )}
       </div>
 
-      {/* load more */}
       {hasMore && (
         <button className={styles.loadMore} onClick={handleLoadMore}>
           Load more
