@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import { mockAccommodations } from "../../data/mockAccommodations";
 import styles from "./AccommodationPage.module.css";
-import { Link } from "react-router-dom";
+import heroImage from "../../assets/images/accommodation/pet-accommodation.jpg";
 
 function AccommodationPage() {
   return (
@@ -9,27 +10,20 @@ function AccommodationPage() {
         <div className={styles.heroText}>
           <h1>Pet friendly Accommodations</h1>
 
-          <p>
-            Find places across countries that welcome your animal.
-          </p>
+          <p>Find places across countries that welcome your animal.</p>
 
-          <select
-            className={styles.countrySelect}
-            defaultValue="Sweden"
-          >
+          <select className={styles.countrySelect} defaultValue="Sweden">
             <option value="Sweden">Sweden 🇸🇪</option>
             <option value="Norway">Norway 🇳🇴</option>
             <option value="Denmark">Denmark 🇩🇰</option>
           </select>
 
-          <button className={styles.searchButton}>
-            ⌕ Search
-          </button>
+          <button className={styles.searchButton}>⌕ Search</button>
         </div>
 
         <img
           className={styles.heroImage}
-          src="/src/assets/images/accommodation/pet-accommodation.jpg"
+          src={heroImage}
           alt="Dog and cat resting together"
         />
       </div>
@@ -45,9 +39,7 @@ function AccommodationPage() {
             <div className={styles.cardContent}>
               <h2>{hotel.name}</h2>
 
-              <p className={styles.address}>
-                {hotel.address}
-              </p>
+              <p className={styles.address}>{hotel.address}</p>
 
               <div className={styles.infoRow}>
                 <span>📞</span>
@@ -62,11 +54,7 @@ function AccommodationPage() {
               <div className={styles.divider}></div>
 
               <div className={styles.cardActions}>
-                <button
-                  type="button"
-                  className={styles.mapButton}
-                  disabled
-                >
+                <button type="button" className={styles.mapButton} disabled>
                   📍 View on map
                 </button>
 
@@ -87,12 +75,11 @@ function AccommodationPage() {
       <div className={styles.contactBox}>
         <h3>Didn’t find what you Need?</h3>
 
-        <p>
-          Contact us for personalized recommendations.
-        </p>
-<Link to="/contact" className={styles.contactButton}>
-  Contact us
-</Link>
+        <p>Contact us for personalized recommendations.</p>
+
+        <Link to="/contact" className={styles.contactButton}>
+          Contact us
+        </Link>
       </div>
     </section>
   );
